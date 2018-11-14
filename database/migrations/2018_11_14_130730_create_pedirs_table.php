@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMateriasTable extends Migration
+class CreatePedirsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateMateriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('materias', function (Blueprint $table) {
+        Schema::create('pedirs', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('name',65);
-            $table->index(['id','name']);
             $table->timestamps();
+            $table->string('nombre');
+            $table->string('direccion');
+            $table->string('pedido');
+            $table->string('costo');
+            $table->string('tipo');
+            
         });
     }
 
@@ -28,6 +32,6 @@ class CreateMateriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('materias');
+        Schema::dropIfExists('pedirs');
     }
 }

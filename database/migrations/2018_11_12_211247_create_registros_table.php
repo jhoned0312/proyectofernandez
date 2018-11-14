@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCarrerasTable extends Migration
+class CreateRegistrosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateCarrerasTable extends Migration
      */
     public function up()
     {
-        Schema::create('carreras', function (Blueprint $table) {
+        Schema::create('registros', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('name',65);
-            $table->index(['id','name']);
+            $table->string('nombre');
+            $table->string('precio');
+            $table->string('tipo');
+            $table->string('detalle');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateCarrerasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carreras');
+        Schema::dropIfExists('registros');
     }
 }

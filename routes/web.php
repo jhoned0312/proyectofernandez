@@ -17,4 +17,28 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/','nuevoController@inde');
+//Route::get('/uno','nuevoController@uno');
+//Route::get('/dos','nuevocontroller@dos');
+Route::get('/tres','nuevoController@tres');
+//Route::get('/cuatro','nuevocontroller@cuatro');
+
+Route::resource('registro','RgistroController');
+
+Route::resource('menu','MenuController');
+
+Route::resource('pedir','PedidoController');
+
+Route::resource('index','PedidoController');
+
+
+//Route::resource('inde','usuarioController');
+
+//Route::post('usuario','usuarioController@store');
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Route::get('/redire','socialController');
+//Route::get('/callback','socialController');

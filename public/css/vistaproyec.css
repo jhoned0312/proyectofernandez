@@ -1,0 +1,82 @@
+header, article, footer, section, nav{
+	display: block;
+}
+body{
+	text-align: left;
+}
+#uno{
+	width: auto;
+	height: auto;
+	margin:auto auto;
+}
+#uno h1{
+
+width: auto;
+text-align: center;
+}
+#dos{
+	text-align: center;
+	;
+}
+#tres{
+	height: 100px;
+	text-align: center;	
+}
+#tres li{
+		display: inline-block;
+	font:bold 20px italic;
+
+}
+.menu a{
+	padding:20px;
+	font:25px solid black;
+	text-decoration: none;
+}
+.menu a:hover{
+background: #99ffff;
+}
+#comentario{
+clear: both;
+text-align: center;
+border:1px solid black	;
+}
+#conterio1{
+	height: 300px;
+	width: 660px;
+	float: left;
+text-align: center;
+
+}
+#conterio1:hover{
+	transform:rotate(0deg) scaleX(1.5);
+}
+#conterio2{
+	height: 300px;
+	float: left;
+	width: 667px;
+text-align: center;
+}
+#conterio2:hover{
+transform:rotate(0deg) scaleX(1.5);	
+}
+#pie{
+clear: both;
+text-align: center;
+border:1px solid black	;		
+
+transition: 0.3s;
+}
+#pie p{
+color: black;
+}
+#pie:hover{
+background: yellow;
+width: 1300px;
+transform:rotate(0deg) scaleX(2);
+border-radius: 100px 100px 100px 100px;
+align-items: center;
+}
+
+
+
+

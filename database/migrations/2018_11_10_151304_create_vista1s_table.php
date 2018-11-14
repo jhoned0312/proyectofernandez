@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAyudantesTable extends Migration
+class CreateVista1sTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateAyudantesTable extends Migration
      */
     public function up()
     {
-        Schema::create('ayudantes', function (Blueprint $table) {
+        Schema::create('vista1s', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('name',65);
-            $table->index(['id','name']);
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreateAyudantesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ayudantes');
+        Schema::dropIfExists('vista1s');
     }
 }
